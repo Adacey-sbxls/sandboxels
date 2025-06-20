@@ -40,7 +40,7 @@ elements.cucumber = {
 	state: "solid",
 	density: 410,
 	reactions: {
-		"salt_water": {elem1:"pickle",elem2:"pickle_juice"},
+		"salt_water": {elem1:"pickle",elem2:"pickle_juice"}, ./32
 		"vinegar": {elem1:"pickle",elem2:"pickle_juice"},
 		"yogurt": {elem1:null,elem2:"tzatziki"},
 	}
@@ -147,7 +147,11 @@ elements.NaK = {
 	state: "liquid",
 	density: 866,
 	reactions: {
-		"water": {elem1:["caustic_potash","hydrogen"],elem2:"fire"}
+		"water": {elem1:["caustic_potash","hydrogen"],elem2:"fire"},
+		"salt_water": {elem1:["caustic_potash","hydrogen"],elem2:["fire, salt, salt"]},
+		"sugar_water": {elem1:["caustic_potash","hydrogen"],elem2:["sugar,fire,sugar"]},
+		"dirty_water": {elem1:["caustic_potash","hydrogen"],elem2:["fire, stench, stench"]},
+		"seltzer": {elem1:["caustic_potash","hydrogen"],elem2:["fire, carbon_dioxide"]},
 	}
 };
 elements.obsidian = {
@@ -204,7 +208,7 @@ elements.pink_polonium_solution={
 	behavior: [
 		"CH:light%1|CH:light%2|CH:light%1",
 		"XX|CH:yellow_polonium_solution%3.5|XX",
-		"XX|XX|XX",
+		"M2|M1|M2",
 	],
 	glow: false
 };
@@ -215,7 +219,8 @@ elements.yellow_polonium_solution={
 	hidden:false,
 	state: "liquid",
 	canPlace: true,
-	glow: false
+	glow: false,
+	behavior: behaviors.LIQUID
 }
 elements.water.reactions.pickle = {elem1:"pickle_juice", elem2:"pickle"}
 elements.salt_water.reactions.pickle = {elem1:"pickle_juice", elem2:"pickle"}
