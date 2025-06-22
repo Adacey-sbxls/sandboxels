@@ -147,7 +147,7 @@ elements.NaK = {
 	state: "liquid",
 	density: 866,
 	reactions: {
-		"water": {elem1:["caustic_potash","hydrogen"],elem2:"fire"}
+		"water": {elem1:["caustic_potash","hydrogen"],elem2:"fire"} 
 	}
 };
 elements.obsidian = {
@@ -204,7 +204,21 @@ elements.pink_polonium_solution={
 	behavior: [
 		"CH:light%1|CH:light%2|CH:light%1",
 		"XX|CH:yellow_polonium_solution%3.5|XX",
+		"M2|M1|M2",
+	],
+	glow: false
+};
+elements.stable_pink_polonium_solution={
+	color: "#f49de5",
+	category:"liquids",
+	customColor: false,
+	hidden:false,
+	state: "liquid",
+	canPlace: true,
+	behavior: [
 		"XX|XX|XX",
+		"XX|XX|XX",
+		"M2|M1|M1",
 	],
 	glow: false
 };
@@ -217,6 +231,35 @@ elements.yellow_polonium_solution={
 	canPlace: true,
 	glow: false
 }
+elements.ferz={
+	alias:"fers",
+	color:"#6e6b6a",
+	category:"special",
+	behavior: [
+		"M1%8|XX|M1%8",
+		"XX|XX|XX",
+		"M1%8|XX|M1%8",
+	],
+	hidden:false
+	//slower than wazir because it looks too fast
+}
+elements.wazir={
+	alias:"vasir",
+	color:"#ada7a6",
+	category:"special", 
+	behavior: [
+		"XX|M1%10|XX",  
+		"M1%10|XX|M1%10",
+		"XX|M1%10|XX",
+	],
+	hidden:false
+}
+elements.those_little_heart_particles_you_get_from_feeding_animals_in_minecraft_yknow_dont_you={
+	color:"#e61017",
+	category:"special",
+	behavior:behaviors.DGAS
+}
+
 elements.water.reactions.pickle = {elem1:"pickle_juice", elem2:"pickle"}
 elements.salt_water.reactions.pickle = {elem1:"pickle_juice", elem2:"pickle"}
 elements.sodium.reactions.potassium = {elem1:"NaK",elem2:null}
