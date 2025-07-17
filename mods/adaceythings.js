@@ -140,7 +140,7 @@ elements.xenon_ice = {
 	tempHigh:-112,
 	stateHigh:"liquid_xenon"
 }
-elements.NaK = {
+elements.NaK_that_isnt_right = {
 	color: "#575050",
 	behavior: behaviors.LIQUID, 
 	category: "liquids",
@@ -204,10 +204,20 @@ elements.pink_polonium_solution={
 	behavior: [
 		"CH:light%1|CH:light%2|CH:light%1",
 		"XX|CH:yellow_polonium_solution%3.5|XX",
-		"XX|XX|XX",
+		"M2|M1|M2",
 	],
 	glow: false
 };
+elements.stable_pink_polonium_solution={
+	color: "#f49ce3",
+	category:"liquids",
+	customColor: false,
+	hidden:false,
+	state: "liquid",
+	canPlace: true,
+	behavior:behaviors.LIQUID,
+	glow: false
+}
 elements.yellow_polonium_solution={
 	color: "#f2f538",
 	category:"liquids",
@@ -215,8 +225,52 @@ elements.yellow_polonium_solution={
 	hidden:false,
 	state: "liquid",
 	canPlace: true,
-	glow: false
+	glow: false,
+	behavior:behaviors.LIQUID
 }
+elements.those_little_heart_particles_you_get_from_feeding_animals_in_minecraft_yknow_dont_you={
+	color:"#e61017",
+	category:"special",
+	behavior:behaviors.DGAS
+}
+elements.higgs_field_collapse={
+	behavior: [
+		"DL%38 AND CH:"void"%30|DL%38 AND CL%30|DL%38 AND CL%30",
+		"DL%38 AND CL%30|DL%60|DL%30 AND CL%30",
+		"DL%38 AND CL%30|DL%38 AND CL%30|DL%38 AND CL%30",
+	],
+	color:"#edf0f5",
+	category:"weapons",
+	maxSize:1,
+	hidden:true,
+	nocheer:true
+}
+elements.ferz={
+	alias:"fers",
+	color:"#6e6b6a",
+	category:"special",
+	behavior: [
+		"M1%8|XX|M1%8",
+		"XX|XX|XX",
+		"M1%8|XX|M1%8",
+	],
+	hidden:false
+	//slower than wazir because it looks too fast
+}
+elements.wazir={
+	alias:"vasir",
+	color:"#ada7a6",
+	category:"special", 
+	behavior: [
+		"XX|M1%10|XX",  
+		"M1%10|XX|M1%10",
+		"XX|M1%10|XX",
+	],
+	hidden:false
+}
+elements.acid.ignore.push("yellow_polonium_solution")
+elements.acid.ignore.push("pink_polonium_solution")
 elements.water.reactions.pickle = {elem1:"pickle_juice", elem2:"pickle"}
 elements.salt_water.reactions.pickle = {elem1:"pickle_juice", elem2:"pickle"}
 elements.sodium.reactions.potassium = {elem1:"NaK",elem2:null}
+//gallium is overrated
