@@ -201,6 +201,9 @@ elementWorth = {
     "cell": -1,
     "cancer": -1,
     "foam": -1,
+    "e_cloner": 0,
+    "slow_cloner": 0,
+    "floating_cloner": 0
 }
 elements.sell = {
     color: ["#fff0b5","#ffe680","#c48821","#986a1a","#eca832","#f0bb62"],
